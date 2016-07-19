@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.myapplication.tipcalculator.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Bill"
+        android:id="@+id/billTxt"
+        android:textColor="#f50606" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/billEditText"
+        android:layout_below="@+id/billTxt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Enter Bill"
+        android:textColor="@color/abc_tint_edittext"
+        android:numeric="signed|integer|decimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of People"
+        android:id="@+id/peopleTextView"
+        android:layout_below="@+id/billEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp"
+        android:textSize="15dp"
+        android:textColor="#f00707" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/peopleEditText"
+        android:layout_below="@+id/peopleTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Enter Number of People"
+        android:numeric="signed|integer|decimal" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Tip Per Person :"
+        android:id="@+id/tipPerPerson"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/peopleEditText" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Total Per Person :"
+        android:id="@+id/totalPerPerson"
+        android:textSize="20dp"
+        android:layout_below="@+id/result1TextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/result1TextView"
+        android:textSize="25dp"
+        android:layout_alignBottom="@+id/tipPerPerson"
+        android:layout_toRightOf="@+id/tipPerPerson"
+        android:layout_toEndOf="@+id/tipPerPerson"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/result2TextView"
+        android:textSize="25dp"
+        android:layout_alignBottom="@+id/totalPerPerson"
+        android:layout_alignLeft="@+id/result1TextView"
+        android:layout_alignStart="@+id/result1TextView" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/percentageSeek"
+        android:max="100"
+        android:indeterminate="false"
+        android:layout_below="@+id/peopleEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/percentageLabel"
+        android:layout_below="@+id/percentageSeek"
+        android:layout_centerHorizontal="true"
+        android:numeric="signed|integer|decimal" />
+</RelativeLayout>
